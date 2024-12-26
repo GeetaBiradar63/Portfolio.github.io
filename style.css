@@ -1,4 +1,3 @@
-
 /* Reset default margin and padding */
 * {
     margin: 0;
@@ -28,30 +27,34 @@ section {
     border-radius: 8px;
     text-align: center;
     margin-top: 30px; /* Adding margin to ensure there's space from the top */
+    overflow: hidden;
 }
 
 /* Header */
 header {
     background-color: #4CAF50;
-    color: gray;
+    color: white; /* Changed from gray to white for better contrast */
     padding: 2rem;
     border-radius: 8px;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Slightly increased size for better prominence */
     margin: 0;
 }
 
 header p {
     margin: 1rem 0 0;
+    font-size: 1.2rem; /* Slightly larger text for better readability */
 }
 
 /* Section Titles */
 h2 {
     color: #4CAF50;
     margin-bottom: 1rem;
+    font-size: 1.8rem; /* Increased size for section titles */
 }
 
 /* List Items */
@@ -65,6 +68,7 @@ ul li {
     margin-bottom: 0.5rem;
     padding: 0.75rem;
     border-radius: 5px;
+    font-size: 1.1rem; /* Slightly larger font size for list items */
 }
 
 /* Links */
@@ -72,10 +76,12 @@ a {
     color: #4CAF50;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
 a:hover {
     text-decoration: underline;
+    color: #333; /* Darker color on hover for better contrast */
 }
 
 /* Definition List */
@@ -83,11 +89,13 @@ dl dt {
     font-weight: bold;
     color: #333;
     margin-top: 1rem;
+    font-size: 1.2rem; /* Slightly larger for definitions */
 }
 
 dl dd {
     margin-left: 1.5rem;
     color: #666;
+    font-size: 1rem; /* Regular size for descriptions */
 }
 
 /* Blockquote */
@@ -97,6 +105,8 @@ blockquote {
     border-left: 4px solid #4CAF50;
     padding-left: 1rem;
     margin-top: 2rem;
+    font-size: 1.2rem; /* Increased font size for readability */
+    line-height: 1.6; /* Added line height for better spacing */
 }
 
 /* Responsive Design */
@@ -108,6 +118,24 @@ blockquote {
     header {
         padding: 1.5rem;
     }
+
+    header h1 {
+        font-size: 2rem; /* Reduce header size for small screens */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Adjust section title size for small screens */
+    }
+
+    ul li {
+        font-size: 1rem; /* Reduce list item font size for better fit */
+    }
+
+    dl dt {
+        font-size: 1rem; /* Adjust definition list title size */
+    }
+
+    blockquote {
+        font-size: 1rem; /* Adjust blockquote font size */
+    }
 }
-style.css
-Displaying style.css.
