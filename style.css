@@ -1,168 +1,177 @@
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Global Styles */
+/* General Styles */
 body {
+    margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #e9eef5; /* Soft light blue background */
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    color: #333; /* General text color */
-}
-
-/* Main Container */
-section {
-    background-color: #ffffff;
-    padding: 2rem;
-    width: 90%;
-    max-width: 800px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-    margin-top: 30px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Header */
-header {
-    background-color: #007acc; /* Vibrant blue */
-    color: #ffffff;
-    padding: 2rem;
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    letter-spacing: 1px; /* Add slight spacing for a clean look */
-}
-
-header p {
-    margin: 1rem 0 0;
-    font-size: 1.2rem;
-}
-
-/* Section Titles */
-h2 {
-    color: #007acc;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-}
-
-/* List Items */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    background-color: #f0f8ff; /* Soft blue-gray for list items */
-    margin-bottom: 0.5rem;
-    padding: 0.75rem;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    border: 1px solid #d6e6f2; /* Subtle border for definition */
-}
-
-/* Links */
-a {
-    color: #007acc;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #005b99; /* Darker shade on hover */
-}
-
-/* Definition List */
-dl dt {
-    font-weight: bold;
+    background-color: #dfffd6; /* Light green background */
     color: #333;
-    margin-top: 1rem;
-    font-size: 1.2rem;
+    line-height: 1.6; /* Consistent line spacing */
 }
 
-dl dd {
-    margin-left: 1.5rem;
-    color: #555;
-    font-size: 1rem;
+/* Navigation Bar Styles */
+nav {
+    background-color: #27ae60; /* Green background */
+    padding: 10px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Blockquote */
-blockquote {
-    font-style: italic;
-    color: #444;
-    border-left: 4px solid #007acc;
-    padding-left: 1rem;
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-/* Buttons (Optional) */
-button {
-    background-color: #007acc;
-    color: #ffffff;
-    padding: 0.75rem 1.5rem;
-    border: none;
+nav a {
+    color: white;
+    font-size: 18px;
+    margin: 0 15px;
+    text-decoration: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-button:hover {
-    background-color: #005b99;
-    transform: scale(1.05);
+nav a:hover {
+    background-color: #2ecc71; /* Lighter green on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Center Bar Styles */
+.center-bar {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.center-bar:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+/* Text Styles */
+h1 {
+    margin: 10px 0;
+    font-size: 28px;
+    text-align: center;
+    color: #27ae60;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-    section {
-        padding: 1.5rem;
+@media (max-width: 768px) {
+    nav a {
+        font-size: 16px;
+        margin: 0 10px;
+        padding: 8px 15px;
     }
-
-    header {
-        padding: 1.5rem;
+    .center-bar {
+        max-width: 95%;
+        padding: 15px;
     }
-
-    header h1 {
-        font-size: 2rem;
+    h1 {
+        font-size: 24px;
     }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    ul li {
-        font-size: 1rem;
-    }
-
-    dl dt {
-        font-size: 1rem;
-    }
-
-    blockquote {
-        font-size: 1rem;
+    p {
+        font-size: 14px;
     }
 }
 
+#business-cases {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #0056b3;
+}
+
+h3 {
+    color: #004085;
+}
+
+h4 {
+    color: #333;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+p {
+    color: #555;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Specific table styling for the fourth reflection */
+.reflection-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.reflection-table, .reflection-table th, .reflection-table td {
+    border: 1px solid #ddd;
+}
+
+.reflection-table th, .reflection-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.reflection-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.reflection-table td {
+    background-color: #fff;
+}
